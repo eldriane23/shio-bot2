@@ -31,7 +31,7 @@ function coinToss() {
 }
 
 function slapu() {
-  var rand = ['slap1.gif', 'slap2.gif', 'slap3.gif'];
+  var rand = ['./images/slap/slap1.gif', './images/slap/slap2.gif', './images/slap/slap3.gif'];
   return rand[Math.floor(Math.random()*rand.length)];
 }
 
@@ -310,7 +310,7 @@ if(command =="slap") {
     if (!slappedUser) return message.channel.send("You must mention a user!")
 		message.delete().catch(O_o=>{}); 
 
-    message.channel.send(message.author.tag + 'slapped' + '!' + slapu());
+    message.channel.send(message.author.tag + 'slapped' + slappedUser + '!' + slapu());
     return;
 
   }
