@@ -1,0 +1,58 @@
+Server / Guild Commands.
+
++ping
+Calculates ping between sending a message and editing it, giving a nice round-trip latency.
++say
+Makes the bot say something and delete the message.
++kick
+This command is limited to mods and admins.
++ban
+This command is limited to mods and admins.
++purge
+This command removes all messages from all users in the channel, up to 100.
++website
+This command will send the Secret Service website URL.
++stream
+This command will send the stream url located in the website.
++giveaway
+This command will show the giveaway prize along with the stream url.
++botclean
+Deletes all messages that any bots sent. Only Admin and Moderators can use this command.
++serverinfo
+Gives brief details about your server. (Name, Date created, Date you joined and Total members.)
+what is my avatar?
+This command will post the user's avatar and link.
+?
+?
+Action Commands
+
++slap @user
+Slaps mentioned user.
++stab @user
+Stabs mentioned user.
++punch @user
+Punches mentioned user.
++kiss @user
+Kisses mentioned user.
++kill @user
+Kills mentioned user.
++pat @user
+Pats mentioned user.
+
+Misc.
+
++shio question answerable by yes or no.
+Plays the 8ball game.
++cointoss
+Toss / Flips a coin.
++listemojis
+List all emojis of the current guild / server.
+?
+BnS Commands
+
+Hey Shio, What badges do i need for element_here class_here?
+ex: Hey Shio, What badges do i need for flame gunslinger?
+Elements:
+flame, shadow, lightning, earth, wind & frost.
+Classes:
+blade master, kfm, assassin, destroyer, blade dancer, soul fighter, summoner, force master, warlock & gunslinger.
