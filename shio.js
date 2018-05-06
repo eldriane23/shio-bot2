@@ -30,6 +30,11 @@ function coinToss() {
     return rand[Math.floor(Math.random()*rand.length)];
 }
 
+function slapu() {
+  var rand = ['slap1.gif', 'slap2.gif', 'slap3.gif'];
+  return rand[Math.floor(Math.random()*rand.length)];
+}
+
 
 client.on("guildCreate", guild => {
   // This event triggers when the bot joins a guild.
@@ -309,7 +314,7 @@ if(command =="slap") {
     .setTitle('')
     .setColor(0x1D82B6)
     .setDescription(message.author.tag + ' slapped ' + slappedUser + '!')
-	  .setImage('http://gifimage.net/wp-content/uploads/2017/07/anime-slap-gif-14.gif');
+	  .setImage(slapu());
 
     message.channel.send(slappedEmbed);
     return;
