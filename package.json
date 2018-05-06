@@ -2,7 +2,7 @@
   "name": "Shio-Bot",
   "version": "1.0.0",
   "description": "Hello there!",
-  "main": "bot.js",
+  "main": "shio.js",
   "author": "Shio Senpai",
   "dependencies": {
     "discord.io": "github:woor/discord.io#gateway_v6",
