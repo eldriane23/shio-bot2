@@ -239,6 +239,7 @@ client.on("message", async message => {
 }
 
   if(command === "help") {
+    message.channel.send("Psst! I sent you a message of the full command list.");
     const helpembed1 = new Discord.RichEmbed()
   .setTitle("Command List")
   .setAuthor("Shio Bot", "https://cldup.com/pHxjiMblQK.jpg")
@@ -319,7 +320,7 @@ client.on("message", async message => {
   
   .addBlankField(true)
   
-  message.author.sendMessage({helpembed1}, {helpembed2}, {helpembed3});
+  message.author.sendMessage(helpembed1 + helpembed2 + helpembed3);
 }
 
  if(command === "giveaway") {
