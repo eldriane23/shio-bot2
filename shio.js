@@ -310,13 +310,7 @@ if(command =="slap") {
     if (!slappedUser) return message.channel.send("You must mention a user!")
 		message.delete().catch(O_o=>{}); 
 
-    let slappedEmbed = new Discord.RichEmbed()
-    .setTitle('')
-    .setColor(0x1D82B6)
-    .setDescription(message.author.tag + ' slapped ' + slappedUser + '!')
-	  .setImage(slapu());
-
-    message.channel.send(slappedEmbed);
+    message.channel.send(message.author.tag + 'slapped' + '!' + slapu());
     return;
 
   }
