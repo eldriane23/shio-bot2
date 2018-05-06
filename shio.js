@@ -34,7 +34,7 @@ function coinToss() {
 client.on("guildCreate", guild => {
   // This event triggers when the bot joins a guild.
   console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
-  client.user.setActivity(`+helpdm`);
+  client.user.setPresence({game: {name: "+help or +helpdm", type: 0}});
 });
 
 client.on("guildDelete", guild => {
