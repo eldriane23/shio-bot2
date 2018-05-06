@@ -267,60 +267,10 @@ client.on("message", async message => {
   .addField("+stream", "This command will send the stream url located in the website.")
   .addField("+giveaway", "This command will show the giveaway prize along with the stream url.")
   .addField("what is my avatar?", "This command will post the user's avatar and link.")
-  
-  .addBlankField(true)
-
-  const helpembed2 = new Discord.RichEmbed()
-  .setTitle("Command List")
-  .setAuthor("Shio Bot", "https://cldup.com/pHxjiMblQK.jpg")
-  /*
-   * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
-   */
-  .setColor(0x00AE86)
-  /*
-   * Takes a Date object, defaults to current date.
-   */
-  .setTimestamp()
-  .setURL("https://secretservice-bns.shivtr.com/pages/shiobot")
-  .addBlankField(true)
-  .addField("Action Commands", ".")
-  .setColor(255, 178, 102)
-  .addField("+slap @user",
-    "Slaps mentioned user.")
-  .addField("+stab @user", "Stabs mentioned user.")
-  .addField("+punch @user", "Punches mentioned user.")
-  .addField("+kiss @user", "Kisses mentioned user.")
-  .addField("+kill @user", "Kills mentioned user.")
-  .addField("+pat @user", "Pats mentioned user.")
-  .addField("+hug @user", "Hugs mentioned user.")
-  .addField("+poke @user", "Pokes mentioned user..")
-  
-  .addBlankField(true)
-
-  const helpembed3 = new Discord.RichEmbed()
-  .setTitle("Command List")
-  .setAuthor("Shio Bot", "https://cldup.com/pHxjiMblQK.jpg")
-  .setFooter("Coded by Eri-Kun#5662", "https://cldup.com/hOIVlHLUYz.png")
-  /*
-   * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
-   */
-  .setColor(0x00AE86)
-  /*
-   * Takes a Date object, defaults to current date.
-   */
-  .setTimestamp()
-  .setURL("https://secretservice-bns.shivtr.com/pages/shiobot")
-  .addBlankField(true)
-  .addField("Action Commands", ".")
-  .setColor(255, 178, 102)
-  .addField("Hey Shio, What badges do i need for element_here class_here?",
-    "Example: Hey Shio, What badges do i need for flame gunslinger?")
-  .addField("Elements", "flame, shadow, lightning, earth, wind & frost.")
-  .addField("Classes @user", "blade master, kfm, assassin, destroyer, blade dancer, soul fighter, summoner, force master, warlock & gunslinger.")
-  
+  .addField("Full command list including Action and BnS commands", "[Click Here](https://secretservice-bns.shivtr.com/pages/shiobot)")
   .addBlankField(true)
   
-  message.author.sendMessage(helpembed1 + helpembed2 + helpembed3);
+  message.author.sendMessage({helpembed1});
 }
 
  if(command === "giveaway") {
