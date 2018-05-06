@@ -239,7 +239,7 @@ client.on("message", async message => {
 }
 
   if(command === "help") {
-    message.channel.send("Psst! I sent you a message of the full command list.");
+    message.channel.send(":envelope_with_arrow: Psst! I sent you a message of the command list.");
     const helpembed1 = new Discord.RichEmbed()
   .setTitle("Command List")
   .setAuthor("Shio Bot", "https://cldup.com/pHxjiMblQK.jpg")
@@ -249,6 +249,7 @@ client.on("message", async message => {
   .setColor(0x00AE86)
   .setDescription("It looks like you need help. Here are some stuff i can do. | Full command list at https://secretservice-bns.shivtr.com/pages/shiobot")
   .setThumbnail("https://cldup.com/eWpE5VM6HS.png")
+  .setFooter ("Coded by [Eri-Kun#5662](https://www.facebook.com/summerwarz.gaming)", "https://cldup.com/hOIVlHLUYz.png")
   /*
    * Takes a Date object, defaults to current date.
    */
