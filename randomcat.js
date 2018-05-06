@@ -1,3 +1,4 @@
+const Discord = require("discord.js");
 const snekfetch = require("snekfetch");
 ​
 module.exports = async () => {
