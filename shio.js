@@ -31,8 +31,9 @@ function coinToss() {
 }
 
 function slapu() {
-  var rand = ['./images/slap/slap1.gif', './images/slap/slap2.gif', './images/slap/slap3.gif'];
-  return rand[Math.floor(Math.random()*rand.length)];
+  var slaps = ['./images/slap/slap1.gif', './images/slap/slap2.gif', './images/slap/slap3.gif'];
+  var rand = Math.floor(Math.random()*rand.length);
+  var randomSlap = images[rand];
 }
 
 
@@ -314,7 +315,7 @@ if(command =="slap") {
     .setTitle('')
     .setColor(0x1D82B6)
     .setDescription(message.author.tag + ' slapped ' + slappedUser + '!')
-	.setImage(slapu());
+	.setImage(randomSlap);
 
     message.channel.send(slappedEmbed);
     return;
