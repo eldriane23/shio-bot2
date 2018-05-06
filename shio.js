@@ -497,7 +497,7 @@ if(command == "fullcmd") {
 }
 
 if(command === "lalala") {
-	message.channel.send('LA LA LA LA', {files: ["./images/lalala.gif"]});
+	message.channel.send('LA LA LA LA', {files: ["./images/lalala2.gif"]});
 	
 }
 
