@@ -18,6 +18,16 @@ client.on("ready", () => {
   client.user.setPresence({game: {name: "+help or +helpdm", type: 2}});
 });
 
+client.on('message', () => {
+  if (message.content === "!sendguildmessages") {
+      var guildList = client.guilds.array();
+      try {
+          guildList.forEach(guild => guild.defaultChannel.send("messageToSend"));
+      } catch (err) {
+          console.log("Could not send message to " + guild.name);
+      }
+  }
+});
 
 function doMagic8BallVoodoo() {
     var rand = [':love_letter: Uhh, Sure Why not?', ':love_letter:  Hell No.', ':love_letter: It is true.', ':love_letter: Impossible.', ':love_letter: Of course.', ':love_letter: I do not think so.', ':love_letter: Yep!', ':love_letter: It is not true.', ':love_letter: I highly doubt that', ':love_letter: Nuh uh!', ':love_letter: Sources point to no.', ':love_letter: Theories prove it.', ':love_letter: I am lazy today, Try later.', ':love_letter: You are hopeless', ':love_letter: Meh', ':love_letter: Nawp', ':love_letter: Concentrate and ask again', ':love_letter: Shut up.', ':love_letter: No no no no no no no no, NOOOOOOPE', ':love_letter: Uhh I do not think so.', ':love_letter: Pfft!', ':love_letter: Sure!', ':love_letter: I have to say yes.', ':love_letter: Fine! before you start crying >.>', ':love_letter: Who cares?', ':love_letter: Ask me if i care.', ':love_letter: Do you think i give a damn?'];
