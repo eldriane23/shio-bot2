@@ -270,7 +270,7 @@ client.on("message", async message => {
   .addField("Full command list including Action and BnS commands", "[Click Here](https://secretservice-bns.shivtr.com/pages/shiobot)")
   .addBlankField(true)
   
-  message.author.sendMessage({helpembed1});
+  message.author.sendMessage{helpembed1);
 }
 
  if(command === "giveaway") {
