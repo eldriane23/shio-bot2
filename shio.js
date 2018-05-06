@@ -15,7 +15,7 @@ client.on("ready", () => {
   console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`); 
   // Example of changing the bot's playing game to something useful. `client.user` is what the
   // docs refer to as the "ClientUser".
-  client.user.setPresence({game: {name: "+help or +helpdm", type: 2}});
+  client.user.setPresence({game: {name: "+help", type: 2}});
 });
 
 
@@ -34,7 +34,7 @@ function coinToss() {
 client.on("guildCreate", guild => {
   // This event triggers when the bot joins a guild.
   console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
-  client.user.setPresence({game: {name: "+help or +helpdm", type: 2}});
+  client.user.setPresence({game: {name: "+help", type: 2}});
 });
 
 client.on("guildDelete", guild => {
@@ -239,7 +239,7 @@ client.on("message", async message => {
 }
 
   if(command === "help") {
-    const embed = new Discord.RichEmbed()
+    const helpembed1 = new Discord.RichEmbed()
   .setTitle("Command List")
   .setAuthor("Shio Bot", "https://cldup.com/pHxjiMblQK.jpg")
   /*
@@ -247,7 +247,6 @@ client.on("message", async message => {
    */
   .setColor(0x00AE86)
   .setDescription("It looks like you need help. Here are some stuff i can do. | Full command list at https://secretservice-bns.shivtr.com/pages/shiobot")
-  .setFooter("Coded by Eri-Kun#5662", "https://cldup.com/hOIVlHLUYz.png")
   .setThumbnail("https://cldup.com/eWpE5VM6HS.png")
   /*
    * Takes a Date object, defaults to current date.
@@ -269,24 +268,58 @@ client.on("message", async message => {
   .addField("what is my avatar?", "This command will post the user's avatar and link.")
   
   .addBlankField(true)
-  
+
+  const helpembed2 = new Discord.RichEmbed()
+  .setTitle("Command List")
+  .setAuthor("Shio Bot", "https://cldup.com/pHxjiMblQK.jpg")
+  /*
+   * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
+   */
+  .setColor(0x00AE86)
+  /*
+   * Takes a Date object, defaults to current date.
+   */
+  .setTimestamp()
+  .setURL("https://secretservice-bns.shivtr.com/pages/shiobot")
+  .addBlankField(true)
   .addField("Action Commands", ".")
-  .addField("+slap @user", "Slaps mentioned user.", true)
-  .addField("+stab @user", "Stabs mentioned user.", true)
-  .addField("+punch @user", "Punches mentioned user.", true)
-  .addField("+kiss @user", "Kisses mentioned user.", true)
-  .addField("+kill @user", "Kills mentioned user.", true)
-  .addField("+pat @user", "Pats mentioned user.", true )
+  .setColor(255, 178, 102)
+  .addField("+slap @user",
+    "Slaps mentioned user.")
+  .addField("+stab @user", "Stabs mentioned user.")
+  .addField("+punch @user", "Punches mentioned user.")
+  .addField("+kiss @user", "Kisses mentioned user.")
+  .addField("+kill @user", "Kills mentioned user.")
+  .addField("+pat @user", "Pats mentioned user.")
+  .addField("+hug @user", "Hugs mentioned user.")
+  .addField("+poke @user", "Pokes mentioned user..")
+  
+  .addBlankField(true)
+
+  const helpembed3 = new Discord.RichEmbed()
+  .setTitle("Command List")
+  .setAuthor("Shio Bot", "https://cldup.com/pHxjiMblQK.jpg")
+  .setFooter("Coded by Eri-Kun#5662", "https://cldup.com/hOIVlHLUYz.png")
+  /*
+   * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
+   */
+  .setColor(0x00AE86)
+  /*
+   * Takes a Date object, defaults to current date.
+   */
+  .setTimestamp()
+  .setURL("https://secretservice-bns.shivtr.com/pages/shiobot")
+  .addBlankField(true)
+  .addField("Action Commands", ".")
+  .setColor(255, 178, 102)
+  .addField("Hey Shio, What badges do i need for element_here class_here?",
+    "Example: Hey Shio, What badges do i need for flame gunslinger?")
+  .addField("Elements", "flame, shadow, lightning, earth, wind & frost.")
+  .addField("Classes @user", "blade master, kfm, assassin, destroyer, blade dancer, soul fighter, summoner, force master, warlock & gunslinger.")
   
   .addBlankField(true)
   
-  .addField("BnS Commands", ".")
-  .addField("Hey Shio, What badges do i need for element_here class_here? ", "ex: Hey Shio, What badges do i need for flame gunslinger?")
-  .addField("Elements:", "flame, shadow, lightning, earth, wind & frost.")
-  .addField("Classes:", "blade master, kfm, assassin, destroyer, blade dancer, soul fighter, summoner, force master, warlock & gunslinger.")
-  .addBlankField(true);
-  
-  message.channel.send({embed});
+  message.author.sendMessage({helpembed1}, {helpembed2}, {helpembed3});
 }
 
  if(command === "giveaway") {
@@ -486,11 +519,7 @@ if (command === "cointoss") {
     message.channel.sendMessage(coinToss())
   }
   
-if (command === "helpdm") {
-    message.channel.sendMessage(":calling: It seems you have requested help. Check your DMs.");
-    message.author.sendMessage("Thanks for using the help command, Please visit: https://secretservice-bns.shivtr.com/pages/shiobot for full command list.")
-  }
-
+  
 if(command == "fullcmd") {
 	message.channel.send(`Here you go!`, {files: ["./commandlist.txt"]});
 	
