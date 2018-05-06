@@ -15,7 +15,7 @@ client.on("ready", () => {
   console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`); 
   // Example of changing the bot's playing game to something useful. `client.user` is what the
   // docs refer to as the "ClientUser".
-  client.user.setPresence({game: {name: "+help or +helpdm", type: 0}});
+  client.user.setPresence({game: {name: "+help or +helpdm", type: 2}});
 });
 
 
@@ -34,7 +34,7 @@ function coinToss() {
 client.on("guildCreate", guild => {
   // This event triggers when the bot joins a guild.
   console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
-  client.user.setPresence({game: {name: "+help or +helpdm", type: 0}});
+  client.user.setPresence({game: {name: "+help or +helpdm", type: 2}});
 });
 
 client.on("guildDelete", guild => {
