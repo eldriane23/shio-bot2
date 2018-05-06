@@ -249,7 +249,7 @@ client.on("message", async message => {
   .setColor(0x00AE86)
   .setDescription("It looks like you need help. Here are some stuff i can do. | Full command list at https://secretservice-bns.shivtr.com/pages/shiobot")
   .setThumbnail("https://cldup.com/eWpE5VM6HS.png")
-  .setFooter ("Coded by [Eri-Kun#5662](https://www.facebook.com/summerwarz.gaming)", "https://cldup.com/hOIVlHLUYz.png")
+  .setFooter ("Coded by Eri-Kun#5662", "https://cldup.com/hOIVlHLUYz.png")
   /*
    * Takes a Date object, defaults to current date.
    */
@@ -269,7 +269,6 @@ client.on("message", async message => {
   .addField("+giveaway", "This command will show the giveaway prize along with the stream url.")
   .addField("what is my avatar?", "This command will post the user's avatar and link.")
   .addField("Full command list including Action and BnS commands", "[Click Here](https://secretservice-bns.shivtr.com/pages/shiobot)")
-  .addBlankField(true)
   
   message.author.sendMessage(helpembed1);
 }
