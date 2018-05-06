@@ -31,7 +31,7 @@ function coinToss() {
 }
 
 function slapu() {
-  var slaps = ['./images/slap/slap1.gif', './images/slap/slap2.gif', './images/slap/slap3.gif'];
+  var slaps = ['https://media.giphy.com/media/jLeyZWgtwgr2U/giphy.gif', 'https://media1.tenor.com/images/1cf84bf514d2abd2810588caf7d9fd08/tenor.gif?itemid=7679403', 'https://media1.tenor.com/images/85722c3e51d390e11a0493696f32fb69/tenor.gif?itemid=5463215'];
   var rand = Math.floor(Math.random()*rand.length);
   var randomSlap = images[rand];
 }
