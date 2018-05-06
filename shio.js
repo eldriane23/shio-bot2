@@ -300,9 +300,6 @@ if(command === "stream") {
 //Action Commands
 
 if(command =="slap") {
-  var slaps = ['https://media.giphy.com/media/jLeyZWgtwgr2U/giphy.gif', 'https://media1.tenor.com/images/1cf84bf514d2abd2810588caf7d9fd08/tenor.gif?itemid=7679403', 'https://media1.tenor.com/images/85722c3e51d390e11a0493696f32fb69/tenor.gif?itemid=5463215'];
-  var rand = Math.floor(Math.random()*rand.length);
-  var randomSlap = slaps[rand];
 
     let slappedUser = (message.mentions.users.first())
     if (!slappedUser) return message.channel.send("You must mention a user!")
@@ -312,7 +309,7 @@ if(command =="slap") {
     .setTitle('')
     .setColor(0x1D82B6)
     .setDescription(message.author.tag + ' slapped ' + slappedUser + '!')
-	.setImage(randomSlap);
+	.setImage('https://media1.tenor.com/images/85722c3e51d390e11a0493696f32fb69/tenor.gif?itemid=5463215');
 
     message.channel.send(slappedEmbed);
     return;
