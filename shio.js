@@ -487,7 +487,7 @@ if(command === "cat") {
  message.channel.send(randomCat());
 }
 
-if(command === "IGN") {
+if(command === "ign") {
   message.channel.send(":loudspeaker: My IGN is Chisato Nishio in Blade & Soul NA Yura server. Feel free to add me. https://bnstree.com/character/na/Chisato%20Nishio");
 }
 
