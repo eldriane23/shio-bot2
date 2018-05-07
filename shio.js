@@ -62,7 +62,7 @@ client.on('guildMemberAdd', member => {
   // Do nothing if the channel wasn't found on this server
   if (!channel) return;
   // Send the message, mentioning the member
-  channel.send(`Welcome to Secret Service, ${member} `);
+  channel.send(`Welcome to our Server!, ${member}`);
 });
 
   //BnS Class Badges:
