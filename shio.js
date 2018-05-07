@@ -486,6 +486,12 @@ if(command === "cat") {
  message.channel.send(randomcat());
 }
 
+const swearWords = ["shit", "damn", "fuck", "asshole"];
+if( swearWords.some(word => message.content.includes(word)) ) {
+  message.reply("bobba");
+  // Or just do message.delete();
+}
+
 });
 
 client.login(config.token);
