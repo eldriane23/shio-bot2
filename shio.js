@@ -131,14 +131,7 @@ client.on("message", (message) => {
   if(message.content === "Thank You Shio") {
     message.channel.send("What can i say except you're welcome!");
   }
-    if (message.content === "sendguildmessages") {
-        var guildList = client.guilds.array();
-        try {
-            guildList.forEach(guild => guild.defaultChannel.send("Added +ign command which will tell you the owner's ign in Blade & Soul."));
-        } catch (err) {
-            console.log("Could not send message to " + guild.name);
-        }
-    }
+  
 });
 
 
