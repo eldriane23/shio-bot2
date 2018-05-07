@@ -132,11 +132,7 @@ client.on("message", (message) => {
   }
 });
 
-const swearWords = ["shit", "damn", "fuck", "asshole"];
-if(swearWords.some(word => message.content.includes(word))) {
-  message.reply("bobba");
-  // Or just do message.delete();
-}
+
 
 client.on("message", async message => {
   // This event will run on every single message received, from any channel or DM.
