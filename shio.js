@@ -416,7 +416,7 @@ if(command =="poke") {
     .setTitle('')
     .setColor(0x1D82B6)
     .setDescription(message.author.tag + ' poked ' + pokedUser + '!')
-	.setImage(`https://gifimage.net/wp-content/uploads/2017/09/anime-poke-gif-12.gif`);
+	.setImage(`https://i.pinimg.com/originals/9d/25/23/9d25235a88f0fb52c3b72bf9404d2b7e.gif`);
 
     message.channel.send(pokedEmbed);
     return;
