@@ -178,7 +178,7 @@ client.on("message", async message => {
     // Please read on Array.some() to understand this bit: 
     // https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/some?
     if (message.author.id !== '281585402060603392')
-      return message.reply("Sorry, you don't have permissions to use this!");
+      return message.reply("Nice Try, but you are not Shio!");
     
     // Let's first check if we have a member and if we can kick them!
     // message.mentions.members is a collection of people that have been mentioned, as GuildMembers.
@@ -205,7 +205,7 @@ client.on("message", async message => {
     // Most of this command is identical to kick, except that here we'll only let admins do it.
     // In the real world mods could ban too, but this is just an example, right? ;)
     if (message.author.id !== '281585402060603392')
-      return message.reply("Sorry, you don't have permissions to use this!");
+      return message.reply("Nice Try, but you are not Shio!");
     
     let member = message.mentions.members.first();
     if(!member)
@@ -431,7 +431,7 @@ if(command == "meh") {
 
 if (command == 'botclean') {
 	if (message.author.id !== '281585402060603392')
-      return message.reply("Sorry, you don't have permissions to use this!");
+      return message.reply("Nice Try, but you are not Shio!");
   
     message.channel.fetchMessages().then(messages => {
         const botMessages = messages.filter(msg => msg.author.bot);
